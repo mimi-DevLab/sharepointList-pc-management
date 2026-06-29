@@ -1,0 +1,161 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/tile-formatting.schema.json",
+  "height": 260,
+  "width": 260,
+  "hideSelection": false,
+  "groupProps": {
+    "headerFormatter": {
+      "elmType": "div",
+      "style": {
+        "width": "100%",
+        "height": "40px"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "width": "100%",
+            "white-space": "nowrap",
+            "overflow": "hidden",
+            "border-bottom": "2px solid",
+            "padding": "2px"
+          },
+          "attributes": {
+            "class": "ms-fontColor-themePrimary"
+          },
+          "children": [
+            {
+              "elmType": "span",
+              "txtContent": "= '合計：' + @group.count + '台'",
+              "style": {
+                "margin-left": "20px",
+                "font-size": "18px",
+                "font-weight": "700"
+              },
+              "attributes": {
+                "class": "ms-fontColor-themePrimary"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "formatter": {
+    "elmType": "div",
+    "_comment": "カード枠組み",
+    "style": {
+      "border-radius": "8px",
+      "border": "1px solid #e0e0e0",
+      "background-color": "#ffffff",
+      "padding": "14px 16px",
+      "display": "block"
+    },
+    "children": [
+      {
+        "elmType": "div",
+        "_comment": "番号",
+        "style": {
+          "display": "inline-block",
+          "font-size": "11px",
+          "font-weight": "600",
+          "border-radius": "20px",
+          "padding": "2px 12px",
+          "margin-bottom": "10px"
+        },
+        "attributes": {
+          "class": "ms-bgColor-themeLighter ms-fontColor-themePrimary"
+        },
+        "txtContent": "=('No. ' + [$field_1])"
+      },
+      {
+        "elmType": "div",
+        "_comment": "名前",
+        "style": {
+          "font-weight": "600",
+          "font-size": "14px",
+          "margin-bottom": "2px",
+          "color": "#333333"
+        },
+        "txtContent": "[$field_2]"
+      },
+      {
+        "elmType": "div",
+        "_comment": "メールアドレス",
+        "style": {
+          "font-size": "12px",
+          "color": "#333333",
+          "margin-bottom": "8px"
+        },
+        "txtContent": "[$field_3]"
+      },
+      {
+        "elmType": "div",
+        "style": {
+          "border-top": "1px solid #e0e0e0",
+          "margin-bottom": "8px"
+        }
+      },
+      {
+        "elmType": "div",
+        "_comment": "端末ID",
+        "style": {
+          "font-size": "11px",
+          "background-color": "#f5f5f5",
+          "border-radius": "4px",
+          "padding": "2px 7px",
+          "margin-bottom": "4px",
+          "color": "#333333"
+        },
+        "txtContent": "[$field_4]"
+      },
+      {
+        "elmType": "div",
+        "_comment": "FRID",
+        "style": {
+          "font-size": "11px",
+          "color": "#333333",
+          "margin-bottom": "4px"
+        },
+        "txtContent": "=('ID: ' + [$field_5])"
+      },
+      {
+        "elmType": "div",
+        "_comment": "パスワード",
+        "style": {
+          "font-size": "11px",
+          "color": "#333333",
+          "margin-bottom": "8px"
+        },
+        "txtContent": "=('Pass: ' + [$field_6])"
+      },
+      {
+        "elmType": "div",
+        "style": {
+          "border-top": "1px solid #e0e0e0",
+          "padding-top": "8px"
+        },
+        "children": [
+          {
+            "elmType": "div",
+            "style": {
+              "font-size": "10px",
+              "color": "#333333",
+              "margin-bottom": "2px"
+            },
+            "txtContent": "備考"
+          },
+          {
+            "elmType": "div",
+            "style": {
+              "font-size": "11px",
+              "line-height": "1.5",
+              "word-break": "break-all"
+            },
+            "txtContent": "[$field_7]"
+          }
+        ]
+      }
+    ]
+  }
+}
