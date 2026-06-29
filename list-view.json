@@ -1,0 +1,45 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/sp/v2/row-formatting.schema.json",
+  "hideColumnHeader": false,
+  "groupProps": {
+    "headerFormatter": {
+      "elmType": "div",
+      "style": {
+        "width": "= @window.innerWidth * 0.75 + 'px'",
+        "height": "40px"
+      },
+      "children": [
+        {
+          "elmType": "div",
+          "style": {
+            "width": "100%",
+            "white-space": "nowrap",
+            "overflow": "hidden",
+            "border-bottom": "2px solid",
+            "padding": "2px"
+          },
+          "attributes": {
+            "class": "ms-fontColor-themePrimary ms-fontWeight-bold ms-fontSize-18"
+          },
+          "children": [
+            {
+              "elmType": "span",
+              "txtContent": "= 'No.' + @group.fieldData.displayValue",
+              "style": {
+                "margin-left": "20px"
+              }
+            },
+            {
+              "elmType": "span",
+              "txtContent": "= '（合計 ' + @group.count + ' 台）'",
+              "style": {
+                "margin-left": "8px",
+                "font-size": "13px"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
