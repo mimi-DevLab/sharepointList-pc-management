@@ -111,7 +111,7 @@
       },
       {
         "elmType": "div",
-        "_comment": "FRID",
+        "_comment": "ID",
         "style": {
           "font-size": "11px",
           "color": "#333333",
